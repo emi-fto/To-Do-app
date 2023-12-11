@@ -1,7 +1,7 @@
 function Navbar () {
     return (
       <nav>
-        <p>React - Components & props</p>
+        <p>Navbar</p>
       </nav>
     );
   }
