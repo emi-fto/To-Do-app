@@ -1,7 +1,7 @@
 function Footer () {
     return (
       <footer>
-        <p>Footer</p>
+        <p>https://github.com/emi-fto/To-Do-app.git</p>
       </footer>
     );
   }

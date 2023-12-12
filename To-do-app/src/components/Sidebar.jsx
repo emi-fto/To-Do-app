@@ -1,7 +1,9 @@
 function Sidebar () {
     return (
       <div>
-        <p>Sidebar</p>
+     <a href="#" > Homepage </a>
+     <a href="#" > About us </a>
+    
       </div>
     );
   }
