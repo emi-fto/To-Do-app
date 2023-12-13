@@ -1,6 +1,8 @@
+import '../styles/Sidebar.css'
+
 function Sidebar () {
     return (
-      <div>
+      <div className='Sidebar'>
      <a href="#" > Homepage </a>
      <a href="#" > About us </a>
     

@@ -1,5 +1,15 @@
-nav {
-    background-color: rgb(224, 38, 137);
-    margin: 0;
-    padding: 0;
+.Navbar {
+    background: #012828;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    justify-content: flex-start;
+    gap: 38vw;
+}
+
+.Navbar img{
+    background-color: white;
+    border-radius: 5px;
 }

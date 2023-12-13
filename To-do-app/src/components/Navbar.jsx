@@ -3,9 +3,9 @@ import '../styles/Navbar.css'
 
 function Navbar () {
     return (
-      <nav>
-      
+      <nav className='Navbar'>
         <img src={logo} alt = "logo" />
+        <p>The Best To-Do-App</p>
       </nav>
     );
   }
