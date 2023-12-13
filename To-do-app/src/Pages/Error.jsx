@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-const About = () => {
+const Error = () => {
     return ( 
         <div>
-            Hello
+            404 ERROR
 
         </div>
 
@@ -13,4 +13,4 @@ const About = () => {
  
 
 
-export default About
+export default Error
