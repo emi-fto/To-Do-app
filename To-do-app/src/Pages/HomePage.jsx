@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const TaskPage = () => {
+const HomePage = () => {
     return ( 
         <div>
             Hello
@@ -13,4 +13,4 @@ const TaskPage = () => {
  
 
 
-export default TaskPage
+export default HomePage
