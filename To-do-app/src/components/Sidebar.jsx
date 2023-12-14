@@ -1,11 +1,11 @@
 import '../styles/Sidebar.css'
+import { Link } from "react-router-dom"; // <== IMPORT and IMPORTANT
 
 function Sidebar () {
     return (
       <div className='Sidebar'>
-     <a href="#" > Homepage </a>
-     <a href="#" > About us </a>
-    
+        <Link to="/"> Homepage </Link>
+        <Link to="/about"> About us </Link>
       </div>
     );
   }
