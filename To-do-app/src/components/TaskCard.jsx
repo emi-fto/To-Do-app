@@ -8,6 +8,7 @@ function TaskCard({
       <div className="taskCard">
         <p>{id} {task} {completed}</p>
       </div>
+      
   );
 }
 

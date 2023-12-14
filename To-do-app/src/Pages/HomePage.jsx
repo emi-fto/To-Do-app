@@ -7,23 +7,29 @@ import TaskCard from "../components/TaskCard";
 function HomePage (){
 const [tasks, setTasks] = useState(taskData)
 return(
-        <>
+    <div className='mainCtn'>
+        <div className="toDos">
         {tasks &&
             tasks.map((task) =>{
                 return(
-                    <Link to={`/task/${task.id}`} key={task.id}>
-                    <TaskCard {...task}/>
-                    </Link>
-
-                    
-                );
+                    <div className="taskCard">
+                        <Link to={`/task/${task.id}`} key={task.id}>
+                        <TaskCard {...task}/>
+                        </Link>
+                        <button> Completed </button>
+                    </div>
+                    )
             })}
         <Link to="/create-task">
             <button className="createButton">
                 Create new Task
             </button>
         </Link>
-        </>
+        </div>
+        <div className="done">
+        Completed Tasks
+        </div>
+    </div>
 )
 }
 
