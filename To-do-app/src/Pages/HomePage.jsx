@@ -13,18 +13,13 @@ return(
             tasks.map((task) =>{
                 return(
                     <div className="taskCard">
+                        <input type="checkbox" />
                         <Link to={`/task/${task.id}`} key={task.id}>
                         <TaskCard {...task}/>
                         </Link>
-                        <button> Completed </button>
                     </div>
                     )
             })}
-        <Link to="/create-task">
-            <button className="createButton">
-                Create new Task
-            </button>
-        </Link>
         </div>
         <div className="done">
         Completed Tasks

@@ -6,6 +6,11 @@ function Sidebar () {
       <div className='Sidebar'>
         <Link to="/"> Homepage </Link>
         <Link to="/about"> About us </Link>
+        <Link to="/create-task">
+            <button className="createButton">
+                Create new Task
+            </button>
+        </Link>
       </div>
     );
   }
