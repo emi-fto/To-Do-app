@@ -11,4 +11,4 @@ function TaskCard({
   );
 }
 
-export default StudentCard;
+export default TaskCard;
