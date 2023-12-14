@@ -1,16 +1,19 @@
-import { Link } from "react-router-dom";
+import '../styles/HomePage.css'
+import { useState } from 'react'
+import { Link } from "react-router-dom"; // <== IMPORT and IMPORTANT
+import taskData from"../assets/tasks.json"
 
-const HomePage = () => {
-    return ( 
-        <div>
-            Hello
+function HomePage (){
+const [tasks, setTasks] = useState(taskData)
+return(
+<>{tasks &&
+    tasks.map((task) =>{
+        return(
+            <Link to={`/task/${task.id}`} key={task.id}>
+              <TaskCard {...tasks}/>
+            </Link>
+        )
+    })}
+</>)}
 
-        </div>
-
-
-     );
-}
- 
-
-
-export default HomePage
+export default HomePage;

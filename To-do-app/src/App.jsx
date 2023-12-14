@@ -2,8 +2,6 @@ import './styles/App.css'
 import Navbar from './components/Navbar.jsx'
 import Footer from './components/Footer.jsx'
 import Sidebar from './components/Sidebar.jsx'
-import tasks from"./assets/tasks.json"
-import TaskList from "./components/TaskList.jsx";
 import {Route, Routes} from 'react-router-dom'
 import HomePage from "./Pages/HomePage.jsx";
 import TaskDetail from "./Pages/TaskDetail.jsx";
@@ -24,11 +22,8 @@ function App() {
           <Route path="/create-task" element={<Create/>} />
           <Route path="/about" element={<About/>} />
           <Route path="*" element={<Error/>} />
-
         </Routes>
-      </div>
-
-      <TaskList tasks = {tasks}/> 
+      </div> 
       <Sidebar/>
       <Footer/>
     </div>
