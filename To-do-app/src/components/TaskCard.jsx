@@ -1,12 +1,11 @@
 
 function TaskCard({
-  id,
   task,
   completed,
 }) {
   return (
       <div className="taskCard">
-        <p>{id} {task} {completed}</p>
+        <p> {task} {completed}</p>
       </div>
   );
 }

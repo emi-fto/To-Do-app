@@ -1,46 +1,49 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from 'react'
 import {v4 as uuidv4} from 'uuid'
+import '../styles/create.css'
+
 // {  "id": 1, "task": "Read the project brief", "completed": true},
 
 
-const Create = (setTasks) => {
-    const [id, setId] = useState();
-    const [task, setTask] = useState();
+const Create = ({setTasks}) => {
+    const [task, setTask] = useState("");
     const [completed, setCompleted] = useState(false);
-
+    const navigate = useNavigate()
 
     const handleSubmit = event =>{
         event.preventDefault()
-        console.log('Submit', {task, completed})
-        setStudents((prevTasks)=> {
+        console.log('Submit', {task})
+        const newTaskId = (uuidv4)
+
+        setTasks((prevTasks)=> {
             return [ ...prevTasks, {
-                id: uuidv4(),
+                _id: newTaskId,
                 task: task,
                 completed:completed,
             }
-            
-            
             ]
-
-
+        })
+            navigate('/')
         }
 
-)
-    }
     
     return ( 
         <>
+        <div className="Title">
         <h1> New Task </h1>
-        <label> Task
-        <input name="task" type="text" value={task} onChange={({target}) => setTask(target.value)}/>
+        </div>
+
+        <form onSubmit= {handleSubmit} > 
+        <label > Task 
+        <input required value={task} onChange={event => setTask(event.target.value)}/>
         </label>
-        <label>
+        <label> 
             Statut
-            <input name="completed" type="checkbox" value={completed} onChange={({target}) => setCompleted(target.value)}/>
+            <input type="checkbox" value={completed} onChange={event => setCompleted(event.target.checked)}/>
           </label>
 
-        <form onSubmit= {handleSubmit}> 
+        
                 <button type='submit'> Create </button>
         </form>
         </>
