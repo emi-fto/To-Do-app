@@ -1,9 +1,8 @@
 import '../styles/HomePage.css'
-import { useState } from 'react'
 import { Link } from "react-router-dom"; // <== IMPORT and IMPORTANT
-import taskData from"../assets/tasks.json"
 import TaskCard from "../components/TaskCard";
 
+<<<<<<< HEAD
 function HomePage (){
 const [tasks, setTasks] = useState(taskData)
 return(
@@ -25,6 +24,26 @@ return(
         Completed Tasks
         </div>
     </div>
+=======
+function HomePage ({tasks}){
+return (
+        <div class="border">
+        <h1> Your Tasks</h1>
+       
+       {tasks.map(task => (
+                    <Link to={`/task/${task.id}`} key={task.id}>
+                    <TaskCard {...task}/>
+                    </Link>
+                    
+                 ))}
+               
+                <Link to="/create-task">
+                <button className="createButton">
+                    Create new Task
+                </button>
+            </Link>
+            </div>
+>>>>>>> creation
 )
 }
 
