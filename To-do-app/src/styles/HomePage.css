@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 .mainCtn {
     display: flex;
     flex-direction: row;
@@ -34,9 +33,4 @@
 
 .taskCard button {
     height: 2rem;
-=======
-.border{
-
-background-color: wheat;
->>>>>>> creation
 }
