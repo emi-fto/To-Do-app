@@ -1,8 +1,10 @@
 import '../styles/Footer.css'
+
+
 function Footer () {
     return (
       <footer className='Footer'>
-        <p>https://github.com/emi-fto/To-Do-app.git</p>
+        <a href="https://github.com/emi-fto/To-Do-app.git" target="_blank">Link to the GitHub Repo, click here!</a>
       </footer>
     );
   }
