@@ -2,6 +2,7 @@ import '../styles/HomePage.css'
 import { Link } from "react-router-dom"; // <== IMPORT and IMPORTANT
 import TaskCard from "../components/TaskCard";
 
+
 function HomePage ({tasks}) {
 return(
     <div className='mainCtn'>
@@ -10,7 +11,7 @@ return(
             tasks.map((task) => {
                 return(
                     <div className="taskCard">
-                        <input type="checkbox" />
+                        <input type="checkbox" onChange={event => setCompletedTasks(completedTasks.push(task))} /> {/* right logic for completed tasks? */}
                         <Link to={`/task/${task.id}`} key={task.id}>
                         <TaskCard {...task}/>
                         </Link>
@@ -19,7 +20,6 @@ return(
             })}
         </div>
         <div className="done">
-        Logic for compledetTasks to be done, but how?
         </div>
     </div>
 )

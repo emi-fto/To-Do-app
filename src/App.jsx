@@ -16,13 +16,14 @@ import taskData from"./assets/tasks.json"
 
 function App() {
   const [tasks, setTasks] = useState(taskData)
-  const [completedTasks, setCompletedTasks] = useState([]) //right logic for completed tasks?
+  const completedTaskArray = []
+  const [completedTasks, setCompletedTasks] = useState(completedTaskArray) //right logic for completed tasks?
   return (
     <div className="App">
       <Navbar/>
       <div className="pages">
         <Routes>
-          <Route path="/" element={<HomePage tasks= {tasks} completedTasks={completedTasks}/>} /> {/* right logic for completed tasks? */}
+          <Route path="/" element={<HomePage tasks= {tasks} completedTasks={completedTasks} setCompletedTasks={setCompletedTasks}/>} /> {/* right logic for completed tasks? */}
           <Route path="/task/:taskId" element={<TaskDetail tasks= {tasks}/>} />
           <Route path="/create-task" element={<Create setTasks= {setTasks}/>} />
           <Route path="/about" element={<About/>} />
