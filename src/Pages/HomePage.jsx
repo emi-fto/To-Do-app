@@ -19,7 +19,7 @@ return(
             })}
         </div>
         <div className="done">
-        Completed Tasks
+        Logic for compledetTasks to be done, but how?
         </div>
     </div>
 )

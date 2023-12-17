@@ -41,10 +41,10 @@ const Create = ({setTasks}) => {
         <label> 
             Status
             <input type="checkbox" value={completed} onChange={event => setCompleted(event.target.checked)}/>
-          </label>
+        </label>
 
         
-                <button type='submit'> Create </button>
+        <button type='submit'> Create </button>
         </form>
         </>
      );
