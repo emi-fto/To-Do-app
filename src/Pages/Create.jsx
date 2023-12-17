@@ -39,7 +39,7 @@ const Create = ({setTasks}) => {
         <input required value={task} onChange={event => setTask(event.target.value)}/>
         </label>
         <label> 
-            Statut
+            Status
             <input type="checkbox" value={completed} onChange={event => setCompleted(event.target.checked)}/>
           </label>
 
