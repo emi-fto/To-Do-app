@@ -12,6 +12,9 @@
     border: 1px solid black;
     border-radius: 5px;
     width: 35%;
+    margin-top :20px;
+
+    
 }
 
 .done {
@@ -21,6 +24,7 @@
     border: 1px solid black;
     border-radius: 5px;
     width: 35%;
+    margin-top :20px;
 }
 
 .taskCard {
@@ -29,6 +33,7 @@
     height: 3rem;
     align-items: center;
     gap: 20px;
+   
 }
 
 .taskCard button {
