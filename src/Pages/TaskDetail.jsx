@@ -14,8 +14,6 @@ const TaskDetail = ({ tasks }) => {
       <h1>Task Details Page</h1>
       <h2 className="task-name">{taskProfile.task}</h2>
       
-
-
       <Link to="/">
         <button className="back-button">Back</button>
       </Link>

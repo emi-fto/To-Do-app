@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import '../styles/HomePage.css';
 import { Link } from 'react-router-dom';
 import TaskCard from '../components/TaskCard';
+import TaskDetail from "../Pages/TaskDetail";
+
 
 function HomePage({ tasks }) {
   const [todos, setTodos] = useState(tasks.filter(task => !task.completed));
