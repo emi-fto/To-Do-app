@@ -10,12 +10,14 @@ import Create from "./Pages/Create.jsx";
 import About from "./Pages/About.jsx";
 import Error from "./Pages/Error.jsx";
 import taskData from"./assets/tasks.json"
+import { v4 as uuidv4 } from "uuid"
 
 
 
 
 function App() {
-  const [tasks, setTasks] = useState(taskData)
+  const dataWithIds = taskData.map((currentElement) => ({ ...currentElement, id: uuidv4() }))
+  const [tasks, setTasks] = useState(dataWithIds)
   const completedTaskArray = []
   const [completedTasks, setCompletedTasks] = useState(completedTaskArray) //right logic for completed tasks?
   return (
