@@ -24,7 +24,7 @@ function App() {
       <div className="pages">
         <Routes>
           <Route path="/" element={<HomePage tasks= {tasks} completedTasks={completedTasks} setCompletedTasks={setCompletedTasks}/>} /> {/* right logic for completed tasks? */}
-          <Route path="/task/:taskId" element={<TaskDetail tasks= {tasks}/>} />
+          <Route path="/task/:taskId" element={<TaskDetail tasks= {tasks} setTasks= {setTasks}/>} />
           <Route path="/create-task" element={<Create setTasks= {setTasks}/>} />
           <Route path="/about" element={<About/>} />
           <Route path="*" element={<Error/>} />
