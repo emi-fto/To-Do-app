@@ -14,11 +14,11 @@ const Create = ({setTasks}) => {
     const handleSubmit = event =>{
         event.preventDefault()
         console.log('Submit', {task})
-        const newTaskId = (uuidv4)
+        const newTaskId = uuidv4();
 
         setTasks((prevTasks)=> {
             return [ ...prevTasks, {
-                _id: newTaskId,
+                id: newTaskId,
                 task: task,
                 completed:completed,
             }
