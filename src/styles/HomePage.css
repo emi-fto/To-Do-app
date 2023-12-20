@@ -6,7 +6,6 @@
     margin-top: 20px;
     margin-right: 10%;
 
-
 }
 .toDos,
 .done {
@@ -20,8 +19,6 @@
     width: 35%;
     margin-top :20px;
 }
-
-
 
 .taskCard {
     display: flex;
@@ -69,5 +66,4 @@
     font-size: 32px;
     padding-top: 10%;
     box-shadow: 0 0px 4px  rgba(0, 0, 0, 0.5);
-
   }
