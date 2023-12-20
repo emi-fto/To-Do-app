@@ -18,14 +18,12 @@ import { v4 as uuidv4 } from "uuid"
 function App() {
   const dataWithIds = taskData.map((currentElement) => ({ ...currentElement, id: uuidv4() }))
   const [tasks, setTasks] = useState(dataWithIds)
-  const completedTaskArray = []
-  const [completedTasks, setCompletedTasks] = useState(completedTaskArray) //right logic for completed tasks?
   return (
     <div className="App">
       <Navbar/>
       <div className="pages">
         <Routes>
-          <Route path="/" element={<HomePage tasks= {tasks} completedTasks={completedTasks} setCompletedTasks={setCompletedTasks}/>} /> {/* right logic for completed tasks? */}
+          <Route path="/" element={<HomePage tasks= {tasks}/>} /> 
           <Route path="/task/:taskId" element={<TaskDetail tasks= {tasks} setTasks= {setTasks}/>} />
           <Route path="/create-task" element={<Create setTasks= {setTasks}/>} />
           <Route path="/about" element={<About/>} />

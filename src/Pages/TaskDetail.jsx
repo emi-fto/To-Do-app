@@ -34,10 +34,10 @@ const TaskDetail = ({ tasks, setTasks }) => {
       {/* <h2 className="task-name">{taskProfile.task}</h2> */}
       <form onSubmit= {handleSubmit} > 
         <label > Task 
-        <input required value={task} onChange={event => setTask(event.target.value)}/>
+          <input required value={task} onChange={event => setTask(event.target.value)}/>
         </label>
         <button type='submit'> Update </button>
-        </form>
+      </form>
       <Link to="/">
         <button className="back-button">Back</button>
       </Link>
