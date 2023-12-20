@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { Link, Navigate, useParams, useNavigate } from "react-router-dom";
+import '../styles/TaskDetail.css'
 
 const TaskDetail = ({ tasks, setTasks }) => {
   const { taskId } = useParams();
@@ -35,13 +36,16 @@ const TaskDetail = ({ tasks, setTasks }) => {
   return (
     <div className="TaskdetailPage">
       <h1>Task Details Page</h1>
-      <form onSubmit= {handleSubmit} > 
-        <label > Task 
+      <div  className="container">
+
+      <form className="form" onSubmit= {handleSubmit} > 
+        <label >
           <input required value={task} onChange={event => setTask(event.target.value)}/>
         </label>
-        <button type='submit'> Update </button>
+        <button className="button-update" type='submit'> Update </button>
       </form>
-      <button onClick={handleDelete}>Delete Task</button>
+      </div>
+      <button className="delete-button" onClick={handleDelete}>Delete Task</button>
       <Link to="/">
         <button className="back-button">Back</button>
       </Link>
