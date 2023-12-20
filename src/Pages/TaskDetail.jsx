@@ -31,7 +31,6 @@ const TaskDetail = ({ tasks, setTasks }) => {
   return (
     <div className="TaskdetailPage">
       <h1>Task Details Page</h1>
-      {/* <h2 className="task-name">{taskProfile.task}</h2> */}
       <form onSubmit= {handleSubmit} > 
         <label > Task 
           <input required value={task} onChange={event => setTask(event.target.value)}/>

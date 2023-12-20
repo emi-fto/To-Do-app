@@ -53,7 +53,6 @@ We built as an exercise a simple application using react, used to manage tasks. 
 - React Library
   - BrowserRouter
   - UseState
-  - UseEffect
   - UseNavigate
   - Uuidv4
 
