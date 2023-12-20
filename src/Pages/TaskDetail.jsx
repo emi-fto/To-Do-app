@@ -14,18 +14,22 @@ const TaskDetail = ({ tasks, setTasks }) => {
   const handleSubmit = event =>{
       event.preventDefault()
       
-      // Update the task content in the tasks array
         const updatedTasks = tasks.map((currentTask) =>
         currentTask.id.toString() === taskId ? { ...currentTask, task } : currentTask
       );
-
-      // Set the updated tasks using the setTasks function
+    
       setTasks(updatedTasks);
 
-      // Navigate back to the task list page
       navigate('/')
       }
+  
+  const handleDelete = () => {
+        const updatedTasks = tasks.filter((currentTask) => currentTask.id.toString() !== taskId);
 
+        setTasks(updatedTasks);
+
+        navigate('/');
+      };
 
 
   return (
@@ -37,6 +41,7 @@ const TaskDetail = ({ tasks, setTasks }) => {
         </label>
         <button type='submit'> Update </button>
       </form>
+      <button onClick={handleDelete}>Delete Task</button>
       <Link to="/">
         <button className="back-button">Back</button>
       </Link>
