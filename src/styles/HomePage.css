@@ -5,7 +5,7 @@
     gap: 150px;
     margin-top: 20px;
     margin-right: 10%;
-
+    margin-bottom: 5%;
 }
 .toDos,
 .done {
@@ -31,7 +31,6 @@
     color: white;
     width: 100%; 
     box-sizing: border-box;
-    padding-left: 3%;
 }
 
 .taskCard button {
