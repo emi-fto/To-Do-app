@@ -7,7 +7,7 @@ function Sidebar () {
         <Link to="/"> Homepage </Link>
         <Link to="/about"> About us </Link>
         <Link to="/create-task">
-            <button className="createButton">
+            <button className="button">
                 Create new Task
             </button>
         </Link>

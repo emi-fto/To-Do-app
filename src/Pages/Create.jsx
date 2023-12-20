@@ -38,13 +38,8 @@ const Create = ({setTasks}) => {
         <label >  
         <input className="input-box" placeholder="Add your task"required value={task} onChange={event => setTask(event.target.value)}/>
         </label>
-        <label> 
-            Status
-            <input type="checkbox" value={completed} onChange={event => setCompleted(event.target.checked)}/>
-        </label>
-
-        
-        <button type='submit'> Create </button>
+       
+        <button className="button" type='submit'> Create </button>
         </form>
         </div>
         </>

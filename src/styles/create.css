@@ -4,27 +4,36 @@ h1 {
     font-size: 1rem;
     line-height: 1.5;
 }
-.container-form{
+.container{
     max-width: 540px;
     width: 100%;
     margin: 0px auto 20px;
     padding : 40px 0px 40px;
+
 }
 .form {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color: #edeef0;
-    justify-content: space-evenly;
     padding-left: 20px;
     margin-bottom: 25px;
     border-radius: 20px; 
     box-shadow: 0 2px 0px  rgba(0, 0, 0, 0.1);
 }
-input-box{
-    flex: 1;
+
+input{
     border: none;
     outline: none;
     background: transparent;
     padding: 10px;
-   
 }
+
+.button{
+    padding: 3% 8% ;
+    background-color: #00D1AE;
+    border-radius: 40px;
+    color:aliceblue;
+    border-color: aliceblue;
+    cursor: pointer;
+ }
