@@ -8,7 +8,7 @@ function Navbar () {
         <Link to="/">
         <img src={logo} alt = "logo" />
         </Link>
-        <p>The Best To-Do-App</p>
+        <div className='titleapp' >Task Easy</div>
       </nav>
     );
   }

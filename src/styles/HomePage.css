@@ -48,14 +48,7 @@
     font-weight: bold;
   }
   
-  /* Ajoutez ces styles pour la couleur verte */
-  .taskCard.taskCompleted {
-    background-color: #8eff8e; /* Couleur verte */
-  }
   
-  .taskCard.taskCompleted a {
-    color: #000; /* Couleur du texte pour les tâches terminées */
-  }
   .title{
     height: 3rem;
     background-color: #006753;

@@ -1,5 +1,5 @@
 .Navbar {
-    background: #012828;
+    background: #006753;
     padding: 1rem;
     display: flex;
     flex-direction: row;
@@ -12,4 +12,11 @@
 .Navbar img{
     background-color: white;
     border-radius: 5px;
+}
+
+.titleapp{
+        font-size: 32px;
+        font-weight: bold;
+        margin-left:-5%;
+
 }
