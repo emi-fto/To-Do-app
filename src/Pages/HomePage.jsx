@@ -28,8 +28,10 @@ function HomePage({ tasks }) {
   return (
     <div className="mainCtn">
       <div className="toDos">
+        <div className="title">TO DO</div>
         {todos.map(task => (
           <div className="taskCard" key={task.id}>
+           
             <input
               type="checkbox"
               onChange={event => handleCheckboxChange(event, task)}
@@ -37,10 +39,12 @@ function HomePage({ tasks }) {
             <Link to={`/task/${task.id}`}>
               <TaskCard {...task} />
             </Link>
+           
           </div>
         ))}
       </div>
       <div className="done">
+      <div className="title">DONE</div>
         {completedTasks.map(task => (
           <div className="taskCard" key={task.id}>
             <input

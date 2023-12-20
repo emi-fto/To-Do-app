@@ -1,6 +1,33 @@
-.h1 {
+h1 {
     color: #111111;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
+}
+.container{
+    max-width: 540px;
+    width: 100%;
+    margin: 0px auto 20px;
+    padding : 40px 0px 40px;
+
+
+}
+.form {
+    display: flex;
+    align-items: center;
+    background-color: #edeef0;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    border-radius: 20px; 
+    box-shadow: 0 2px 0px  rgba(0, 0, 0, 0.1);
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    
+   
 }

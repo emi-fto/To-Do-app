@@ -33,10 +33,10 @@ const Create = ({setTasks}) => {
         <div className="Title">
         <h1> New Task </h1>
         </div>
-
-        <form onSubmit= {handleSubmit} > 
-        <label > Task 
-        <input required value={task} onChange={event => setTask(event.target.value)}/>
+        <div  className="container">
+        <form onSubmit= {handleSubmit} className="form" > 
+        <label >  
+        <input className="input-box" placeholder="Add your task"required value={task} onChange={event => setTask(event.target.value)}/>
         </label>
         <label> 
             Status
@@ -46,6 +46,7 @@ const Create = ({setTasks}) => {
         
         <button type='submit'> Create </button>
         </form>
+        </div>
         </>
      );
 }
