@@ -1,34 +1,63 @@
-# To-Do-app
+# Task Easy
 
 ## Description
 
-Simple mini project of a to do web app
+We are Emiliano Foti and Maxime Comptier, two Ironhackers passionate about Web Development.
+We built as an exercise a simple application using react, used to manage tasks. The name of the app is Task Easy, try it!
 
 ## Main Functionalities
 
 - Create a task
 - Check task Done / ToDo
+- Update a task
+- Delete a task
 
 ## Backlog
 
-- Api
+- Own api
 
-## Data structure
+## React
 
-### React
+- Main
+- App
 
-- Start Screen
-- Game Screen
-- End Screen if Bottles catched > 10
-- End Screen if Bottles catched < 10
+### Components
+
+- Footer
+- Navbar
+- Sidebar
+- TaskCard
+
+### Pages
+
+- About
+- Create
+- Error
+- Homepage
+- Taskdetail
+
+### Styles
+
+- About
+- App
+- Create
+- Footer
+- Homepage
+- Main
+- Navbar
+- Sidebar
 
 ## Technology used
 
 - Vite Framework
 - React Library
   - BrowserRouter
+  - UseState
+  - UseEffect
+  - UseNavigate
+  - Uuidv4
 
 ## Links
 
 - [Linkedin Profile Emiliano](www.linkedin.com/in/emiliano-foti-345a11a4)
-- [Linkedin Profile Maxime](www.linkedin.com/in/maxime-comptier-363388250)
+- [Linkedin Profile Maxime](www.linkedin.com/in/maxime-comptier)
