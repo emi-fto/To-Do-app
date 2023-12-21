@@ -3,31 +3,38 @@ import { useState } from "react";
 import { Link, Navigate, useParams, useNavigate } from "react-router-dom";
 import '../styles/TaskDetail.css'
 
-const TaskDetail = ({ tasks, setTasks }) => {
+const TaskDetail = ({ tasks, setTasks, completedTasks, setCompletedTasks }) => {
   const { taskId } = useParams();
   const navigate = useNavigate();
-  const taskProfile = tasks.find((task) => task.id.toString() === taskId);
+  const taskProfile = tasks.find((task) => task.id.toString() === taskId) || completedTasks.find((completedTask) => completedTask.id.toString() === taskId) ;
 
   if (!taskProfile) {
-    return <Navigate to="/" />;
+    navigate('/')
   }
   const [task, setTask] = useState(taskProfile.task);
   const handleSubmit = event =>{
       event.preventDefault()
       
-        const updatedTasks = tasks.map((currentTask) =>
-        currentTask.id.toString() === taskId ? { ...currentTask, task } : currentTask
-      );
-    
-      setTasks(updatedTasks);
+      const updatedTasks = tasks.map((currentTask) =>
+      currentTask.id.toString() === taskId ? { ...currentTask, task } : currentTask 
+      )
+      setTasks(updatedTasks)
 
+      const updatedCompletedTasks = completedTasks.map((currentCompletedTask) =>
+      currentCompletedTask.id.toString() === taskId ? { ...currentCompletedTask, task } : currentCompletedTask 
+      )
+      setCompletedTasks(updatedCompletedTasks)
+      
+      
       navigate('/')
       }
   
   const handleDelete = () => {
-        const updatedTasks = tasks.filter((currentTask) => currentTask.id.toString() !== taskId);
+        const deleteTasks = tasks.filter((currentTask) => currentTask.id.toString() !== taskId);
+        setTasks(deleteTasks);
 
-        setTasks(updatedTasks);
+        const deleteCompletedTasks = completedTasks.filter((currentCompletedTask) => currentCompletedTask.id.toString() !== taskId);
+        setCompletedTasks(deleteCompletedTasks);
 
         navigate('/');
       };
