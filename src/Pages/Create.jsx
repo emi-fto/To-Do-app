@@ -6,7 +6,7 @@ import '../styles/create.css'
 // {  "id": 1, "task": "Read the project brief", "completed": true},
 
 
-const Create = ({setTasks}) => {
+const Create = ({tasks, setTasks}) => {
     const [task, setTask] = useState("");
     const navigate = useNavigate()
 
@@ -14,8 +14,8 @@ const Create = ({setTasks}) => {
         event.preventDefault()
         const newTaskId = uuidv4();
 
-        setTasks((prevTasks)=> {
-            return [ ...prevTasks, {
+        setTasks(()=> {
+            return [ ...tasks, {
                 id: newTaskId,
                 task: task,
             }
