@@ -6,10 +6,8 @@ import TaskCard from '../components/TaskCard';
 
 
 function HomePage({ tasks }) {
-  const [todos, setTodos] = useState(tasks.filter(task => !task.completed));
-  const [completedTasks, setCompletedTasks] = useState(
-    tasks.filter(task => task.completed)
-  );
+  const [todos, setTodos] = useState(tasks);
+  const [completedTasks, setCompletedTasks] = useState([]);
 
   const handleCheckboxChange = (event, task) => {
     const isChecked = event.target.checked;

@@ -8,19 +8,16 @@ import '../styles/create.css'
 
 const Create = ({setTasks}) => {
     const [task, setTask] = useState("");
-    const [completed, setCompleted] = useState(false);
     const navigate = useNavigate()
 
     const handleSubmit = event =>{
         event.preventDefault()
-        console.log('Submit', {task})
         const newTaskId = uuidv4();
 
         setTasks((prevTasks)=> {
             return [ ...prevTasks, {
                 id: newTaskId,
                 task: task,
-                completed:completed,
             }
             ]
         })
