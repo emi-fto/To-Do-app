@@ -23,7 +23,7 @@ function App() {
       <Navbar/>
       <div className="pages">
         <Routes>
-          <Route path="/" element={<HomePage tasks= {tasks}/>} /> 
+          <Route path="/" element={<HomePage tasks= {tasks} setTasks={setTasks}/>} /> 
           <Route path="/task/:taskId" element={<TaskDetail tasks= {tasks} setTasks= {setTasks}/>} />
           <Route path="/create-task" element={<Create setTasks= {setTasks}/>} />
           <Route path="/about" element={<About/>} />

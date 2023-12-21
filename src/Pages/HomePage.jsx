@@ -10,6 +10,7 @@ function HomePage({ tasks }) {
   const [completedTasks, setCompletedTasks] = useState([]);
 
   const handleCheckboxChange = (event, task) => {
+    event.preventDefault()
     const isChecked = event.target.checked;
 
     if (isChecked) {
