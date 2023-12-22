@@ -31,24 +31,21 @@
     color: white;
     width: 100%; 
     box-sizing: border-box;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.taskCard button {
-    height: 2rem;
+.taskCard a {
+  text-decoration: none;
+  color: white;
 }
 
 .taskCard input {
     margin-right: 10px;
   }
+    
   
-  .taskCard a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  
-  .title{
+.title{
     height: 3rem;
     background-color: #006753;
     color: white;

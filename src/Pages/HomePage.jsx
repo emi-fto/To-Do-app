@@ -30,9 +30,9 @@ function HomePage({ tasks, setTasks, completedTasks, setCompletedTasks }) {
               type="checkbox"
               onChange={event => handleCheckboxChange(event, task)}
             />
-          <Link to={`/task/${task.id}`}>
-          <p>{task.task}</p>
-          </Link>
+            <Link to={`/task/${task.id}`}>
+            <p>{task.task}</p>
+            </Link>
           </div>
         ))}
       </div>
@@ -45,9 +45,9 @@ function HomePage({ tasks, setTasks, completedTasks, setCompletedTasks }) {
               checked
               onChange={event => handleCheckboxChange(event, doneTask)}
             />
-          <Link to={`/task/${doneTask.id}`}>
-          <p>{doneTask.task}</p>
-          </Link>
+            <Link to={`/task/${doneTask.id}`}>
+            <p>{doneTask.task}</p>
+            </Link>
           </div>
         ))}
       </div>
