@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/HomePage.css';
 import { Link } from 'react-router-dom';
-import TaskCard from '../components/TaskCard';
 
 
 
@@ -27,30 +26,28 @@ function HomePage({ tasks, setTasks, completedTasks, setCompletedTasks }) {
         <div className="title">TO DO</div>
         {tasks.map(task => (
           <div className="taskCard" key={task.id}>
-           
             <input
               type="checkbox"
               onChange={event => handleCheckboxChange(event, task)}
             />
-            <Link to={`/task/${task.id}`}>
-              <TaskCard {...task} />
-            </Link>
-           
+          <Link to={`/task/${task.id}`}>
+          <p>{task.task}</p>
+          </Link>
           </div>
         ))}
       </div>
       <div className="done">
       <div className="title">DONE</div>
-        {completedTasks.map(task => (
-          <div className="taskCard" key={task.id}>
+        {completedTasks.map(doneTask => (
+          <div className="taskCard" key={doneTask.id}>
             <input
               type="checkbox"
               checked
-              onChange={event => handleCheckboxChange(event, task)}
+              onChange={event => handleCheckboxChange(event, doneTask)}
             />
-            <Link to={`/task/${task.id}`}>
-              <TaskCard {...task} />
-            </Link>
+          <Link to={`/task/${doneTask.id}`}>
+          <p>{doneTask.task}</p>
+          </Link>
           </div>
         ))}
       </div>
